@@ -31,37 +31,36 @@
   </head>
   <body>
     <!-- Navbar Start  -->
-    <header class="px-10 py-6 bg-[#F9F7F3]">
-      <div class="max-w-[1140px] mx-auto">
-        <div class="navbar font-semibold text-xl">
-          <div class="navbar-start">
-            <button
-              class="btn-md rounded-md bg-[#B4F461] text-[#111111e1] hover:bg-[#94cc4a] font-[Lexend] font-semibold text-lg"
-            >
-              Blog
-            </button>
-          </div>
-          <div class="navbar-center">
-            <div class="flex items-center justify-center gap-8">
-              <img
-                src="https://res.cloudinary.com/dn9bladxx/image/upload/v1727081538/donate_1_wq6fxj.png"
-                alt="Donate logo"
-              />
-              <p class="text-[#111111] text-xl">Donate for Life</p>
+    <header class="sticky top-0 z-50 backdrop-blur-lg">
+      <div class="bg-[#F9F7F3]/70">
+        <div class="max-w-[1140px] mx-auto py-5">
+          <div class="navbar font-semibold text-xl">
+            <div class="navbar-start">
+              <button
+                class="btn-md rounded-md bg-[#B4F461] text-[#111111e1] hover:bg-[#94cc4a] font-[Lexend] font-semibold text-lg"
+              >
+                Blog
+              </button>
             </div>
-          </div>
-          <div class="navbar-end text-center gap-4">
-            <i class="fa-brands fa-bitcoin text-[#FDD835]"></i>
-            <p class="text-[#111111b2]">BTD</p>
+            <div class="navbar-center">
+              <div class="flex items-center justify-center gap-8">
+                <img
+                  src="https://res.cloudinary.com/dn9bladxx/image/upload/v1727081538/donate_1_wq6fxj.png"
+                  alt="Donate logo"
+                />
+                <p class="text-[#111111] text-xl">Donate for Life</p>
+              </div>
+            </div>
+            <div class="navbar-end text-center gap-4">
+              <i class="fa-brands fa-bitcoin text-[#FDD835]"></i>
+              <p id="fixedAmount" class="text-[#111111b2]">
+                10000 <span>BDT</span>
+              </p>
+            </div>
           </div>
         </div>
       </div>
-    </header>
-    <!-- Navbar End  -->
-
-    <main class="bg-white px-10 py-20">
-      <!-- Main Section Start  -->
-      <div class="text-center">
+      <div class="text-center pt-20 pb-7">
         <button
           class="rounded-md btn-md bg-[transparent] shadow-sm hover:bg-[#B4F461] text-black border border-l-[#11111128]"
         >
@@ -73,6 +72,12 @@
           History
         </button>
       </div>
+    </header>
+    <!-- Navbar End  -->
+
+    <main class="bg-white px-10 py-20">
+      <!-- Main Section Start  -->
+
       <!-- Card One -->
       <div
         class="max-w-[1140px] mx-auto p-5 mt-5 border border-[#2a2a2a34] rounded-md"
@@ -80,7 +85,8 @@
         <div class="flex items-start justify-start gap-2">
           <div class="flex-1">
             <img
-              src="./assets/noakhali.png"
+              class="rounded-lg"
+              src="./assets/feni.png"
               alt="Flood relief worker of Noakhali"
             />
           </div>
@@ -91,7 +97,9 @@
               <i
                 class="fa-brands fa-bitcoin text-[#FDD835] text-start text-2xl"
               ></i>
-              <p class="text-base">0 BDT</p>
+              <p id="totalAmountOfNoakhali" class="text-base">
+                0 <span>BDT</span>
+              </p>
             </div>
             <div>
               <h6 class="text-[#111] text-xl">
@@ -107,11 +115,13 @@
               </p>
             </div>
             <input
+              id="donateNoakhali"
               type="text"
               placeholder="Type here"
               class="input input-bordered w-full max-w-full mb-4"
             />
             <button
+              id="donate_for_noakhali"
               class="btn btn-wide w-full bg-[#B4F461] hover:bg-[#6baf11] text-xl font-semibold"
             >
               Donate Now
@@ -126,7 +136,7 @@
         <div class="flex items-start justify-start gap-2">
           <div class="flex-1">
             <img
-              src="./assets/noakhali.png"
+              src="./assets/feni.png"
               alt="Flood relief worker of Noakhali"
             />
           </div>
@@ -137,7 +147,9 @@
               <i
                 class="fa-brands fa-bitcoin text-[#FDD835] text-start text-2xl"
               ></i>
-              <p class="text-base">0 BDT</p>
+              <p id="totalDonationOfFeni" class="text-base">
+                0 <span>BDT</span>
+              </p>
             </div>
             <div>
               <h6 class="text-[#111] text-xl">
@@ -153,11 +165,13 @@
               </p>
             </div>
             <input
+              id="feni"
               type="text"
               placeholder="Type here"
               class="input input-bordered w-full max-w-full mb-4"
             />
             <button
+              id="donateForFeni"
               class="btn btn-wide w-full bg-[#B4F461] hover:bg-[#6baf11] text-xl font-semibold"
             >
               Donate Now
@@ -172,7 +186,7 @@
         <div class="flex items-start justify-start gap-2">
           <div class="flex-1">
             <img
-              src="./assets/noakhali.png"
+              src="./assets/quota-protest.png"
               alt="Flood relief worker of Noakhali"
             />
           </div>
@@ -183,7 +197,9 @@
               <i
                 class="fa-brands fa-bitcoin text-[#FDD835] text-start text-2xl"
               ></i>
-              <p class="text-base">0 BDT</p>
+              <p id="totalDonationForStudents" class="text-base">
+                0 <span>BDT</span>
+              </p>
             </div>
             <div>
               <h6 class="text-[#111] text-xl">
@@ -199,11 +215,13 @@
               </p>
             </div>
             <input
+              id="studentDonationAmount"
               type="text"
               placeholder="Type here"
               class="input input-bordered w-full max-w-full mb-4"
             />
             <button
+              id="addDonation"
               class="btn btn-wide w-full bg-[#B4F461] hover:bg-[#6baf11] text-xl font-semibold"
             >
               Donate Now
@@ -240,5 +258,9 @@
         </div>
       </div>
     </footer>
+    <footer class="bg-[#F9F7F3] h-20 mt-3"></footer>
+
+    <script src="./Noakhali.js"></script>
+    <script src="./Utilities.js"></script>
   </body>
 </html>
