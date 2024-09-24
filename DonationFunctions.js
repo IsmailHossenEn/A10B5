@@ -5,6 +5,7 @@ document
     const getAmountForNoakhali = getDonationAmount("donateNoakhali");
     const fixedNumber = getfixedAmount("fixedAmount");
     const gettotalAmount = gettotalamount("totalAmountOfNoakhali");
+    const getModal = document.getElementById("modal");
 
     if (
       isNaN(getAmountForNoakhali) ||
@@ -21,6 +22,7 @@ document
       document.getElementById("totalAmountOfNoakhali").innerText =
         totalAmountAfterAddMoney;
     }
+    getModal.classList.remove("hidden");
   });
 document
   .getElementById("donateForFeni")
@@ -29,6 +31,7 @@ document
     const getAmountForFeni = getDonationAmount("feni");
     const fixedNumber = getfixedAmount("fixedAmount");
     const gettotalAmount = gettotalamount("totalDonationOfFeni");
+    const getModal = document.getElementById("modal");
 
     if (
       isNaN(getAmountForFeni) ||
@@ -45,6 +48,7 @@ document
       document.getElementById("totalDonationOfFeni").innerText =
         totalAmountAfterAddMoney;
     }
+    getModal.classList.remove("hidden");
   });
 
 document
@@ -54,6 +58,7 @@ document
     const getAmountForStudents = getDonationAmount("studentDonationAmount");
     const fixedNumber = getfixedAmount("fixedAmount");
     const gettotalAmount = gettotalamount("totalDonationForStudents");
+    const getModal = document.getElementById("modal");
 
     if (
       isNaN(getAmountForStudents) ||
@@ -70,5 +75,11 @@ document
       document.getElementById("totalDonationForStudents").innerText =
         totalAmountAfterAddMoney;
     }
+    getModal.classList.remove("hidden");
   });
-// totalDonationForStudents  b: addDonation  in: studentDonationAmount
+document
+  .getElementById("closeModal")
+  .addEventListener("click", function (event) {
+    event.preventDefault();
+    document.getElementById("modal").classList.add("hidden");
+  });

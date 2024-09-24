@@ -13,3 +13,8 @@ function getfixedAmount(id) {
   const fixedNumber = parseFloat(fixed);
   return fixedNumber;
 }
+
+// function getmodal(id) {
+//   const getModal = document.getElementById(id).classList.add("hidden");
+//   return getModal;
+// }
