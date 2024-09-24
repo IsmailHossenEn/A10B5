@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      href="https://cdn.jsdelivr.net/npm/daisyui@4.12.10/dist/full.min.css"
+      rel="stylesheet"
+      type="text/css"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Lexend:wght@100..900&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
+      integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <title>Blog</title>
+  </head>
+  <body>
+    <header class="sticky top-0 z-50 backdrop-blur-lg">
+      <div class="bg-[#F9F7F3]/70">
+        <div class="max-w-[1140px] mx-auto py-5">
+          <div class="flex flex-col items-center gap-3 md:hidden">
+            <div class="navbar-center md:hidden block">
+              <div class="flex items-center justify-center gap-8">
+                <img
+                  src="https://res.cloudinary.com/dn9bladxx/image/upload/v1727081538/donate_1_wq6fxj.png"
+                  alt="Donate logo"
+                />
+                <p class="text-[#111111] text-xl">Donate for Life</p>
+              </div>
+            </div>
+            <div
+              class="navbar font-semibold text-xl md:hidden flex justify-between"
+            >
+              <div class="navbar-start">
+                <button
+                  id="toggleBtn"
+                  class="btn-md rounded-md bg-[#B4F461] text-[#111111e1] hover:bg-[#94cc4a] font-[Lexend] font-semibold text-lg"
+                >
+                  Blog
+                </button>
+              </div>
+              <div class="navbar-end text-center gap-4">
+                <i class="fa-brands fa-bitcoin text-[#FDD835]"></i>
+                <p id="fixedAmount" class="text-[#111111b2]">
+                  10000 <span>BDT</span>
+                </p>
+              </div>
+            </div>
+          </div>
+
+          <div
+            class="navbar font-semibold text-xl hidden md:flex md:items-center md:justify-between"
+          >
+            <div class="navbar-start">
+              <button
+                id="toggleBtn"
+                class="btn-md rounded-md bg-[#B4F461] text-[#111111e1] hover:bg-[#94cc4a] font-[Lexend] font-semibold text-lg"
+              >
+                Blog
+              </button>
+            </div>
+            <div class="navbar-center md:block hidden">
+              <div class="flex items-center justify-center gap-8">
+                <img
+                  src="https://res.cloudinary.com/dn9bladxx/image/upload/v1727081538/donate_1_wq6fxj.png"
+                  alt="Donate logo"
+                />
+                <p class="text-[#111111] text-xl">Donate for Life</p>
+              </div>
+            </div>
+            <div class="navbar-end text-center gap-4">
+              <i class="fa-brands fa-bitcoin text-[#FDD835]"></i>
+              <p id="fixedAmount" class="text-[#111111b2]">
+                10000 <span>BDT</span>
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="text-center pt-20 pb-7">
+        <button
+          id="showDonation"
+          class="rounded-md btn-md bg-[transparent] shadow-sm text-black border border-l-[#11111128]"
+        >
+          Donation
+        </button>
+        <button
+          id="historyBtn"
+          class="rounded-md btn-md bg-[transparent] shadow-sm text-black border border-l-[#11111128]"
+        >
+          History
+        </button>
+      </div>
+    </header>
+    <main class="w-[1140px] mx-auto py-32 h-screen">
+      <div>
+        <button class="btn btn-wide my-4" id="backmain">
+          Back to Main Page
+        </button>
+      </div>
+      <div class="collapse collapse-arrow bg-base-200">
+        <input type="radio" name="my-accordion-2" checked="checked" />
+        <div class="collapse-title text-xl font-medium">
+          What is the Document Object Model (DOM)?
+        </div>
+        <div class="collapse-content">
+          <p>
+            The Document Object Model (DOM) is a programming interface provided
+            by web browsers that represents an HTML or XML document as a tree
+            structure of objects. Each node in this tree corresponds to a part
+            of the document, such as elements, attributes, and text. JavaScript
+            can access, modify, and manipulate the content and structure of a
+            web page via the DOM.
+          </p>
+        </div>
+      </div>
+      <div class="collapse collapse-arrow bg-base-200 my-5">
+        <input type="radio" name="my-accordion-2" />
+        <div class="collapse-title text-xl font-medium">
+          How do you select an element from the DOM?
+        </div>
+        <div class="collapse-content">
+          <p>
+            One can select an element from the DOM using various methods
+            provided by the document object in JavaScript. Common ways to select
+            elements include:<br />1:let element =
+            document.getElementById('myId')<br />2:let elements =
+            document.getElementsByClassName('myClass')<br />3: let elements =
+            document.getElementsByTagName('div')<br />4: let element =
+            document.querySelector('.myClass')<br />
+            5: let elements = document.querySelectorAll('.myClass');
+          </p>
+        </div>
+      </div>
+      <div class="collapse collapse-arrow bg-base-200 mb-5">
+        <input type="radio" name="my-accordion-2" />
+        <div class="collapse-title text-xl font-medium">
+          What is event delegation in the context of the DOM, and why is it
+          useful?
+        </div>
+        <div class="collapse-content">
+          <p>
+            Event delegation is a technique in JavaScript where one attach a
+            single event listener to a parent element instead of adding event
+            listeners to individual child elements. The event listener on the
+            parent listens for events that bubble up from the child elements.
+          </p>
+        </div>
+      </div>
+      <div class="collapse collapse-arrow bg-base-200">
+        <input type="radio" name="my-accordion-2" />
+        <div class="collapse-title text-xl font-medium">
+          How do you manipulate an element's attributes and styles using the
+          DOM?
+        </div>
+        <div class="collapse-content">
+          <p>
+            1: document.querySelector('a').getAttribute('href')<br />
+            2: document.querySelector('img').setAttribute('src',
+            'new-image.jpg')<br />
+            3: document.querySelector('input').removeAttribute('disabled');
+          </p>
+        </div>
+      </div>
+    </main>
+    <footer class="bg-[#F9F7F3] h-20 mt-3"></footer>
+    <script src="./DonationFunctions.js"></script>
+    <script src="./Utilities.js"></script>
+  </body>
+</html>

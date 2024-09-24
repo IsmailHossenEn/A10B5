@@ -1,3 +1,9 @@
+document.getElementById("toggleBtn").addEventListener("click", function () {
+  window.location.href = "Blog.html";
+});
+document.getElementById("backmain").addEventListener("click", function () {
+  window.location.href = "index.html";
+});
 let historyofData = [];
 console.log("historyData");
 function storeHistory(name, amount) {

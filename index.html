@@ -34,15 +34,48 @@
     <header class="sticky top-0 z-50 backdrop-blur-lg">
       <div class="bg-[#F9F7F3]/70">
         <div class="max-w-[1140px] mx-auto py-5">
-          <div class="navbar font-semibold text-xl">
+          <div class="flex flex-col items-center gap-3 md:hidden">
+            <div class="navbar-center md:hidden block">
+              <div class="flex items-center justify-center gap-8">
+                <img
+                  src="https://res.cloudinary.com/dn9bladxx/image/upload/v1727081538/donate_1_wq6fxj.png"
+                  alt="Donate logo"
+                />
+                <p class="text-[#111111] text-xl">Donate for Life</p>
+              </div>
+            </div>
+            <div
+              class="navbar font-semibold text-xl md:hidden flex justify-between"
+            >
+              <div class="navbar-start">
+                <button
+                  id="toggleBtn"
+                  class="btn-md rounded-md bg-[#B4F461] text-[#111111e1] hover:bg-[#94cc4a] font-[Lexend] font-semibold text-lg"
+                >
+                  Blog
+                </button>
+              </div>
+              <div class="navbar-end text-center gap-4">
+                <i class="fa-brands fa-bitcoin text-[#FDD835]"></i>
+                <p id="fixedAmount" class="text-[#111111b2]">
+                  10000 <span>BDT</span>
+                </p>
+              </div>
+            </div>
+          </div>
+
+          <div
+            class="navbar font-semibold text-xl hidden md:flex md:items-center md:justify-between"
+          >
             <div class="navbar-start">
               <button
+                id="toggleBtn"
                 class="btn-md rounded-md bg-[#B4F461] text-[#111111e1] hover:bg-[#94cc4a] font-[Lexend] font-semibold text-lg"
               >
                 Blog
               </button>
             </div>
-            <div class="navbar-center">
+            <div class="navbar-center md:block hidden">
               <div class="flex items-center justify-center gap-8">
                 <img
                   src="https://res.cloudinary.com/dn9bladxx/image/upload/v1727081538/donate_1_wq6fxj.png"
@@ -84,7 +117,7 @@
       <div
         class="max-w-[1140px] mx-auto p-5 mt-5 border border-[#2a2a2a34] rounded-md"
       >
-        <div class="flex items-start justify-start gap-2">
+        <div class="flex flex-col md:flex-row items-start justify-start gap-2">
           <div class="flex-1">
             <img
               class="rounded-lg"
@@ -135,7 +168,7 @@
       <div
         class="max-w-[1140px] mx-auto p-5 mt-5 border border-[#2a2a2a34] rounded-md"
       >
-        <div class="flex items-start justify-start gap-2">
+        <div class="flex flex-col md:flex-row items-start justify-start gap-2">
           <div class="flex-1">
             <img
               src="./assets/feni.png"
@@ -185,7 +218,7 @@
       <div
         class="max-w-[1140px] mx-auto p-5 mt-5 border border-[#2a2a2a34] rounded-md"
       >
-        <div class="flex items-start justify-start gap-2">
+        <div class="flex flex-col md:flex-row items-start justify-start gap-2">
           <div class="flex-1">
             <img
               src="./assets/quota-protest.png"
