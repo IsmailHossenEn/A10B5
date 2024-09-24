@@ -1,9 +1,7 @@
 document.getElementById("toggleBtn").addEventListener("click", function () {
   window.location.href = "Blog.html";
 });
-document.getElementById("backmain").addEventListener("click", function () {
-  window.location.href = "index.html";
-});
+
 let historyofData = [];
 console.log("historyData");
 function storeHistory(name, amount) {
@@ -15,17 +13,9 @@ function storeHistory(name, amount) {
   historyofData.push(tempObj);
 }
 
-const Box = historyofData.map((item) => {
-  `${item.name} ${item.amount}`;
-  console.log(item.amount);
-
-  // {
-
-  // }
-});
 function showHistory() {
   let historyBox = document.getElementById("historyBox");
-  console.log(historyBox);
+
   historyofData.forEach((item) => {
     let child = document.createElement("div");
     child.innerHTML = `<div>
@@ -41,7 +31,6 @@ function showHistory() {
       </div>
     </div>;`;
     historyBox.appendChild(child);
-    console.log(historyBox);
   });
 }
 document
@@ -49,6 +38,7 @@ document
   .addEventListener("click", function (event) {
     event.preventDefault();
     const getAmountForNoakhali = getDonationAmount("donateNoakhali");
+    console.log(getAmountForNoakhali);
     const fixedNumber = getfixedAmount("fixedAmount");
     const gettotalAmount = gettotalamount("totalAmountOfNoakhali");
     const getModal = document.getElementById("modal");
